@@ -6,11 +6,11 @@ var mainEl = document.getElementById("main");
 
 var secondsLeft = 10;
 
-function setTime() {
+function startTimer() {
   // Sets interval in variable
   var timerInterval = setInterval(function() {
     secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+    timeEl.textContent = secondsLeft + " seconds left till quiz is over.";
 
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
@@ -20,15 +20,33 @@ function setTime() {
     }
 
   }, 1000);
+
+  function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
+    
+
+    function rapidQuestions (questions, quizContainer) {
+
+
+    }
+
+    function answers (questions, quizContainer, resultsContainer) {
+
+      
+    }
+
+  }
 }
 
-// Function to create and append colorsplosion image
+
+// Function to end game
 function sendMessage() {
   timeEl.textContent = " ";
   var imgEl = document.createElement("img");
-  imgEl.setAttribute("src", "images/image_1.jpg");
+  imgEl.setAttribute("src", "images/gameOver.jpeg");
   mainEl.appendChild(imgEl);
 
 }
-
-setTime();
+function begin() {
+  document.getElementById("count");
+  startTimer();
+}
